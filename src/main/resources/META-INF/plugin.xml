@@ -1,15 +1,42 @@
-<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.kigya.file2prompt</id>
+    <id>dev.kigya.file2prompt</id>
     <name>File2Prompt</name>
     <vendor>kigya</vendor>
 
+    <description>
+        <![CDATA[
+    <h2>📄 File2Prompt</h2>
+    <p>
+      Automatically converts your project files into a
+      nicely formatted prompt for any AI assistant.
+    </p>
+    <ul>
+      <li>Recursively scans directories</li>
+      <li>Filters out binary files</li>
+      <li>Wraps code in Markdown code blocks with syntax highlighting</li>
+      <li>Copies to clipboard or opens a temporary .txt</li>
+    </ul>
+    ]]>
+    </description>
+
     <depends>com.intellij.modules.platform</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
+    <actions>
+        <action id="dev.kigya.file2prompt.ConvertFilesToAIPrompt"
+                class="dev.kigya.file2prompt.ConvertFilesToAIPromptAction"
+                text="Convert Files to AI Prompt"
+                description="Generate AI prompt from selected files/folders">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+
+            <!-- Shortcut ⌘⇧P on macOS and Ctrl+Shift+P on Win/Linux -->
+            <keyboard-shortcut keymap="$default" first-keystroke="meta shift P"/>
+        </action>
+    </actions>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.kigya.file2prompt.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
-        <postStartupActivity implementation="com.github.kigya.file2prompt.startup.MyProjectActivity" />
+        <applicationConfigurable
+                id="file2prompt.settings"
+                displayName="File2Prompt"
+                instance="dev.kigya.file2prompt.SettingsConfigurable"/>
     </extensions>
 </idea-plugin>
