@@ -9,7 +9,6 @@ All notable changes to this project will be documented here.
 - Custom plugin icons for New UI.
 
 ### Changed
-- Plugin description translated to English.
 - README reorganized with “Getting Started” guide.
 
 ## [0.1.0] – 2025-06-21

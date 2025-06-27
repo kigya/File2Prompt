@@ -8,6 +8,8 @@
 
     <depends>com.intellij.modules.platform</depends>
 
+    <description>File2Prompt automatically converts your selected project files into a ready-to-use Markdown prompt for any AI assistant. It recurses through directories, skips binary files, wraps code in syntax-highlighted blocks, and copies the final result to your clipboard or opens it as a .txt file for instant inspection></description>
+
     <actions>
         <action id="dev.kigya.file2prompt.ConvertFilesToAIPrompt"
                 class="dev.kigya.file2prompt.ConvertFilesToAIPromptAction"
