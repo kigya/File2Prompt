@@ -18,6 +18,14 @@
             <!-- Shortcut ⌘⇧P on macOS and Ctrl+Shift+P on Win/Linux -->
             <keyboard-shortcut keymap="$default" first-keystroke="meta shift P"/>
         </action>
+
+        <action id="dev.kigya.file2prompt.GeneratePromptFromChanges"
+                class="dev.kigya.file2prompt.GeneratePromptFromChangesAction"
+                text="Convert Selected Changes to AI Prompt"
+                description="Generate an AI prompt from the contents of the selected changes">
+            <add-to-group group-id="ChangesViewPopupMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift alt P"/>
+        </action>
     </actions>
 
     <extensions defaultExtensionNs="com.intellij">
