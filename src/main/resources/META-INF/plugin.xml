@@ -3,23 +3,12 @@
     <name>File2Prompt</name>
     <vendor>kigya</vendor>
 
-    <description>
-        <![CDATA[
-    <h2>📄 File2Prompt</h2>
-    <p>
-      Automatically converts your project files into a
-      nicely formatted prompt for any AI assistant.
-    </p>
-    <ul>
-      <li>Recursively scans directories</li>
-      <li>Filters out binary files</li>
-      <li>Wraps code in Markdown code blocks with syntax highlighting</li>
-      <li>Copies to clipboard or opens a temporary .txt</li>
-    </ul>
-    ]]>
-    </description>
+    <icon>pluginIcon.svg</icon>
+    <icon_dark>pluginIcon.svg</icon_dark>
 
     <depends>com.intellij.modules.platform</depends>
+
+    <description>File2Prompt automatically converts your selected project files into a ready-to-use Markdown prompt for any AI assistant. It recurses through directories, skips binary files, wraps code in syntax-highlighted blocks, and copies the final result to your clipboard or opens it as a .txt file for instant inspection></description>
 
     <actions>
         <action id="dev.kigya.file2prompt.ConvertFilesToAIPrompt"
@@ -30,6 +19,14 @@
 
             <!-- Shortcut ⌘⇧P on macOS and Ctrl+Shift+P on Win/Linux -->
             <keyboard-shortcut keymap="$default" first-keystroke="meta shift P"/>
+        </action>
+
+        <action id="dev.kigya.file2prompt.GeneratePromptFromChanges"
+                class="dev.kigya.file2prompt.GeneratePromptFromChangesAction"
+                text="Convert Selected Changes to AI Prompt"
+                description="Generate an AI prompt from the contents of the selected changes">
+            <add-to-group group-id="ChangesViewPopupMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift alt P"/>
         </action>
     </actions>
 

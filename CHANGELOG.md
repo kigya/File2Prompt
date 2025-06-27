@@ -1,14 +1,21 @@
-<!-- Keep a Changelog guide -> https://keepachangelog.com -->
+# Changelog
 
-# File2Prompt Changelog
+All notable changes to this project will be documented here.
 
 ## [Unreleased]
 
-## [0.1.0] - 2025-06-21
+### Added
+- “Copy and open .txt file” preference toggle.
+- Custom plugin icons for New UI.
+
+### Changed
+- README reorganized with “Getting Started” guide.
+
+## [0.1.0] – 2025-06-21
 
 ### Added
-
-- Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
-
-[Unreleased]: https://github.com/kigya/File2Prompt/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/kigya/File2Prompt/commits/v0.1.0
+- Initial release scaffolded from the IntelliJ Platform Plugin Template.
+- Converts selected files/folders into a Markdown prompt.
+- Recursive directory scanning with binary-file filtering.
+- Syntax-highlighted code blocks in the generated Markdown.
+- Preference to copy only or copy & open a `.txt` file.
