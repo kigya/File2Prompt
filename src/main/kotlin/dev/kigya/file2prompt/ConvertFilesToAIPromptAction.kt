@@ -1,5 +1,6 @@
 package dev.kigya.file2prompt
 
+import com.intellij.icons.AllIcons
 import com.intellij.notification.Notification
 import com.intellij.notification.NotificationType
 import com.intellij.notification.Notifications
@@ -22,7 +23,11 @@ import java.awt.datatransfer.StringSelection
 import java.nio.file.Files
 import java.nio.file.Path
 
-class ConvertFilesToAIPromptAction : AnAction("Convert Files to AI Prompt"), DumbAware {
+class ConvertFilesToAIPromptAction : AnAction(
+    /* text = */ "Convert Files to AI Prompt",
+    /* description = */ "Files will be converted to .txt file for an AI Prompt using File2Prompt plugin",
+    /* icon = */ AllIcons.Actions.SwapPanels,
+), DumbAware {
 
     override fun getActionUpdateThread(): ActionUpdateThread = ActionUpdateThread.BGT
 

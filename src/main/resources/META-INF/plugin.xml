@@ -3,21 +3,8 @@
     <name>File2Prompt</name>
     <vendor>kigya</vendor>
 
-    <description>
-        <![CDATA[
-    <h2>📄 File2Prompt</h2>
-    <p>
-      Automatically converts your project files into a
-      nicely formatted prompt for any AI assistant.
-    </p>
-    <ul>
-      <li>Recursively scans directories</li>
-      <li>Filters out binary files</li>
-      <li>Wraps code in Markdown code blocks with syntax highlighting</li>
-      <li>Copies to clipboard or opens a temporary .txt</li>
-    </ul>
-    ]]>
-    </description>
+    <icon>pluginIcon.svg</icon>
+    <icon_dark>pluginIcon.svg</icon_dark>
 
     <depends>com.intellij.modules.platform</depends>
 

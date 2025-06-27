@@ -1,51 +1,42 @@
 # File2Prompt
 
-![Build](https://github.com/kigya/File2Prompt/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
+![Build](https://github.com/kigya/File2Prompt/workflows/Build/badge.svg)  
+[![Version](https://img.shields.io/jetbrains/plugin/v/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)  
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
 
-## Template ToDo list
-- [x] Create a new [IntelliJ Platform Plugin Template][template] project.
-- [ ] Get familiar with the [template documentation][template].
-- [ ] Adjust the [pluginGroup](./gradle.properties) and [pluginName](./gradle.properties), as well as the [id](./src/main/resources/META-INF/plugin.xml) and [sources package](./src/main/kotlin).
-- [ ] Adjust the plugin description in `README` (see [Tips][docs:plugin-description])
-- [ ] Review the [Legal Agreements](https://plugins.jetbrains.com/docs/marketplace/legal-agreements.html?from=IJPluginTemplate).
-- [ ] [Publish a plugin manually](https://plugins.jetbrains.com/docs/intellij/publishing-plugin.html?from=IJPluginTemplate) for the first time.
-- [ ] Set the `MARKETPLACE_ID` in the above README badges. You can obtain it once the plugin is published to JetBrains Marketplace.
-- [ ] Set the [Plugin Signing](https://plugins.jetbrains.com/docs/intellij/plugin-signing.html?from=IJPluginTemplate) related [secrets](https://github.com/JetBrains/intellij-platform-plugin-template#environment-variables).
-- [ ] Set the [Deployment Token](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html?from=IJPluginTemplate).
-- [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
-
 <!-- Plugin description -->
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
+<h2>🚀 Why File2Prompt?</h2>
+<p>File2Prompt lets you:</p>
+<ul>
+  <li>Turn selected files and folders into a ready-to-use Markdown prompt</li>
+  <li>Recursively scan directories, automatically skipping binary files</li>
+  <li>Wrap code in syntax-highlighted blocks</li>
+  <li>Copy the result to the clipboard or immediately open it as a <code>.txt</code> file</li>
+</ul>
+<p>Perfect for preparing context before sending it to any AI system.</p>
 
-This specific section is a source for the [plugin.xml](/src/main/resources/META-INF/plugin.xml) file which will be extracted by the [Gradle](/build.gradle.kts) during the build process.
-
-To keep everything working, do not remove `<!-- ... -->` sections. 
+<h2>⚡ Getting Started</h2>
+<ol>
+  <li>
+    <strong>Install the plugin</strong><br/>
+    Open <em>Settings/Preferences → Plugins → Marketplace</em>, search for <strong>File2Prompt</strong>, click <strong>Install</strong>, then restart your IDE.
+  </li>
+  <li>
+    <strong>Select files or folders</strong><br/>
+    In the <em>Project</em> tool window, highlight one or more files—or an entire directory. Binary files are skipped automatically.
+  </li>
+  <li>
+    <strong>Generate your AI prompt</strong><br/>
+    Right-click your selection and choose <em>Convert Files to AI Prompt</em> (⌘⇧P on macOS, Ctrl⇧P on Windows/Linux). The combined result is copied to your clipboard.
+  </li>
+  <li>
+    <strong>(Optional) Open as text</strong><br/>
+    In <em>Settings/Preferences → File2Prompt</em>, enable “Copy and open .txt file.” A temporary <code>.txt</code> will pop up containing your prompt.
+  </li>
+  <li>
+    <strong>Paste into your AI tool</strong><br/>
+    Head over to any AI assistant or chat interface and paste—you’re ready to get insights, generate documentation, refactor code, and more!
+  </li>
+</ol>
+<p><em>File2Prompt works out of the box in any IntelliJ-based IDE (IntelliJ IDEA, PyCharm, CLion, WebStorm, etc.) and supports projects of all sizes.</em></p>
 <!-- Plugin description end -->
-
-## Installation
-
-- Using the IDE built-in plugin system:
-  
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "File2Prompt"</kbd> >
-  <kbd>Install</kbd>
-  
-- Using JetBrains Marketplace:
-
-  Go to [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID) and install it by clicking the <kbd>Install to ...</kbd> button in case your IDE is running.
-
-  You can also download the [latest release](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID/versions) from JetBrains Marketplace and install it manually using
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
-
-- Manually:
-
-  Download the [latest release](https://github.com/kigya/File2Prompt/releases/latest) and install it manually using
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
-
-
----
-Plugin based on the [IntelliJ Platform Plugin Template][template].
-
-[template]: https://github.com/JetBrains/intellij-platform-plugin-template
-[docs:plugin-description]: https://plugins.jetbrains.com/docs/intellij/plugin-user-experience.html#plugin-description-and-presentation
